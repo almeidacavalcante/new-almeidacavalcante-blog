@@ -1,15 +1,15 @@
-/* CSS Custom Properties Definitions */
+
 
 :root {
   --maxWidth-none: "none";
-  --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
-  --maxWidth-2xl: 42rem;
-  --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 56rem;
+  --maxWidth-xs: 40rem;
+  --maxWidth-sm: 44rem;
+  --maxWidth-md: 48rem;
+  --maxWidth-lg: 52rem;
+  --maxWidth-xl: 56rem;
+  --maxWidth-2xl: 62rem;
+  --maxWidth-3xl: 68rem;
+  --maxWidth-4xl: 76rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
   --spacing-px: "1px";
@@ -43,7 +43,7 @@
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
   --lineHeight-relaxed: 1.625;
-  /* 1.200 Minor Third Type Scale */
+
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
   --fontSize-2: 1.2rem;
@@ -52,15 +52,16 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-primary: #4db8ff;
+  --color-text: #e0e0e0;
+  --color-text-light: #a0a0a0;
+  --color-heading: #ffffff;
+  --color-heading-black: #ffffff;
+  --color-accent: #555555;
+  --color-background: #121212;
 }
 
-/* HTML elements */
+
 
 *,
 :after,
@@ -79,6 +80,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 footer {
@@ -89,9 +91,10 @@ hr {
   background: var(--color-accent);
   height: 1px;
   border: 0;
+  border-top: 1px solid var(--color-accent);
 }
 
-/* Heading */
+
 
 h1,
 h2,
@@ -155,7 +158,7 @@ h6 > a {
   color: inherit;
 }
 
-/* Prose */
+
 
 p {
   line-height: var(--lineHeight-relaxed);
@@ -225,7 +228,7 @@ table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
-/* Link */
+
 
 a {
   color: var(--color-primary);
@@ -233,10 +236,10 @@ a {
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* Custom classes */
+
 
 .global-wrapper {
   margin: var(--spacing-0) auto;
@@ -314,10 +317,84 @@ a:focus {
 }
 
 .gatsby-highlight {
-  margin-bottom: var(--spacing-8);
+  background-color: #282a36;
+  color: #f8f8f2;
+  border-radius: 5px;
+  padding: 1em;
+  overflow: auto;
+  text-shadow: 0 0 !important;
 }
 
-/* Media queries */
+.gatsby-highlight pre,
+.gatsby-highlight code {
+  background-color: transparent;
+  color: inherit;
+}
+
+
+.gatsby-highlight .token.function,
+.gatsby-highlight .token.builtin,
+.gatsby-highlight .token.class-name {
+  color: #8be9fd;
+  text-shadow: 0 0 !important;
+
+}
+
+
+pre[class*="language-"] {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+  border-radius: 5px;
+  padding: 1em;
+  overflow: auto;
+  text-shadow: 0 0 !important;
+}
+
+
+pre[class*="language-"] code {
+  background-color: transparent;
+  color: inherit;
+  text-shadow: 0 0 !important;
+
+}
+
+
+pre[class*="language-"] .token.function,
+pre[class*="language-"] .token.builtin,
+pre[class*="language-"] .token.class-name {
+  color: #8be9fd;
+  text-shadow: 0 0 !important;
+}
+
+pre[class*="language-"] .token.operator {
+  background-color: transparent;
+}
+
+
+
+
+code.language-text {
+  background-color: #404040 !important;
+  color: #f8f8f2 !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 4px !important;
+  font-family: monospace !important;
+  font-size: 90% !important;
+}
+
+
+::selection {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+
+
+::-moz-selection {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+
+
 
 @media (max-width: 42rem) {
   blockquote {

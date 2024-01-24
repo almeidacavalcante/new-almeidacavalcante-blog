@@ -81,6 +81,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        social {
+          instagram
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
